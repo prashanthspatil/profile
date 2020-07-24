@@ -38,10 +38,11 @@ if ("serviceWorker" in navigator) {
 							case 'installed':
 								if (navigator.serviceWorker.controller) {
 									// new update available
-									console.log('New update available!');
+									console.log('Update available!');
 									resolve(true);
 								} else {
 									// no update available
+									console.log('No update!');
 									resolve(false);
 								}
 								break;

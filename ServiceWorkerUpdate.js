@@ -2,6 +2,6 @@
 window['isUpdateAvailable']
 	.then(isAvailable => {
 		if (isAvailable) {
-			console.log('update availble');
+			console.log('Update available');
 		}
 	});
