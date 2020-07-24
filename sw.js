@@ -15,7 +15,7 @@ var URLS = [                            // Add URL you want to cache in this lis
   "https://prashanthspatil.github.io/profile/images/fakeprofile/laravel.png",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/php.png",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/react.png",
-  "https://prashanthspatil.github.io/profile/images/fakeprofile/swift.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/swift.jpg",
 ]
 
 // Respond with cached resources
