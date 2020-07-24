@@ -9,8 +9,7 @@ const technologies = [
   { name: "Inventore", image: "images/fakeprofile/swift.jpg" },
   { name: "Veritatis", image: "images/fakeprofile/react.png" },
   { name: "Accusantium", image: "images/fakeprofile/bootstrap.png" },
-  { name: "Accusantium", image: "images/fakeprofile/bootstrap.png" },
-  { name: "Vue", image: "images/fakeprofile/vue.png"},
+  { name: "Vue", image: "images/fakeprofile/vue.png" },
 ]
 
 const showCoffees = () => {
