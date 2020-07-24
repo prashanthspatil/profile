@@ -1,10 +1,21 @@
-var APP_PREFIX = 'PrashanthCafe'  // Identifier for this app (this needs to be consistent across every cache update)
+var APP_PREFIX = 'prashanth-cafe'  // Identifier for this app (this needs to be consistent across every cache update)
 var VERSION = 'v1.0'  // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
-var REPO_BASE_URL = 'https://prashanthspatil.github.io/'
 var URLS = [                            // Add URL you want to cache in this list.
-  REPO_BASE_URL,                        // If you have separate JS/CSS files,
-  REPO_BASE_URL+'index.html'            // add path to those files here
+  "https://prashanthspatil.github.io/",
+  "https://prashanthspatil.github.io/pwa.html",
+  "https://prashanthspatil.github.io/css/pwa/style.css",
+  "https://prashanthspatil.github.io/pwa.js",
+  "https://prashanthspatil.github.io/images/fakeprofile/bitbucket.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/bootstrap.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/css.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/github.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/html.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/js.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/laravel.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/php.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/react.png",
+  "https://prashanthspatil.github.io/images/fakeprofile/swift.png",
 ]
 
 // Respond with cached resources
