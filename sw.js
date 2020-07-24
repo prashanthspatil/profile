@@ -20,7 +20,6 @@ var URLS = [                            // Add URL you want to cache in this lis
   "https://prashanthspatil.github.io/profile/images/fakeprofile/node.png",
 ]
 
-
 // Respond with cached resources
 self.addEventListener('fetch', function (e) {
   // console.log('fetch request : ' + e.request.url)

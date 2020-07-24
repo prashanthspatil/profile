@@ -1,14 +1,14 @@
 const container = document.querySelector(".container")
 const technologies = [
-  { name: "Perspiciatis", image: "images/fakeprofile/bitbucket.png" },
-  { name: "Voluptatem", image: "images/fakeprofile/css.png" },
-  { name: "Explicabo", image: "images/fakeprofile/html.png" },
-  { name: "Rchitecto", image: "images/fakeprofile/php.png" },
-  { name: " Beatae", image: "images/fakeprofile/github.png" },
-  { name: " Vitae", image: "images/fakeprofile/laravel.png" },
-  { name: "Inventore", image: "images/fakeprofile/swift.jpg" },
-  { name: "Veritatis", image: "images/fakeprofile/react.png" },
-  { name: "Accusantium", image: "images/fakeprofile/bootstrap.png" },
+  { name: "Bitbucket", image: "images/fakeprofile/bitbucket.png" },
+  { name: "CSS", image: "images/fakeprofile/css.png" },
+  { name: "HTML", image: "images/fakeprofile/html.png" },
+  { name: "PHP", image: "images/fakeprofile/php.png" },
+  { name: "Github", image: "images/fakeprofile/github.png" },
+  { name: "Laravel", image: "images/fakeprofile/laravel.png" },
+  { name: "Swift", image: "images/fakeprofile/swift.jpg" },
+  { name: "React", image: "images/fakeprofile/react.png" },
+  { name: "Bootstrap", image: "images/fakeprofile/bootstrap.png" },
   { name: "Vue", image: "images/fakeprofile/vue.png" },
   { name: "Node", image: "images/fakeprofile/node.png" },
 
