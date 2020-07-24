@@ -10,6 +10,8 @@ const technologies = [
   { name: "Veritatis", image: "images/fakeprofile/react.png" },
   { name: "Accusantium", image: "images/fakeprofile/bootstrap.png" },
   { name: "Vue", image: "images/fakeprofile/vue.png" },
+  { name: "Node", image: "images/fakeprofile/node.png" },
+
 ]
 
 const showCoffees = () => {
