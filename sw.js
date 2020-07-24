@@ -2,20 +2,20 @@ var APP_PREFIX = 'prashanth-cafe'  // Identifier for this app (this needs to be 
 var VERSION = 'v1.0'  // Version of the off-line cache (change this value everytime you want to update cache)
 var CACHE_NAME = APP_PREFIX + VERSION
 var URLS = [                            // Add URL you want to cache in this list.
-  "https://prashanthspatil.github.io/",
-  "https://prashanthspatil.github.io/pwa.html",
-  "https://prashanthspatil.github.io/css/pwa/style.css",
-  "https://prashanthspatil.github.io/pwa.js",
-  "https://prashanthspatil.github.io/images/fakeprofile/bitbucket.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/bootstrap.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/css.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/github.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/html.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/js.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/laravel.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/php.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/react.png",
-  "https://prashanthspatil.github.io/images/fakeprofile/swift.png",
+  "https://prashanthspatil.github.io/profile/",
+  "https://prashanthspatil.github.io/profile/pwa.html",
+  "https://prashanthspatil.github.io/profile/css/pwa/style.css",
+  "https://prashanthspatil.github.io/profile/pwa.js",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/bitbucket.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/bootstrap.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/css.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/github.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/html.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/js.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/laravel.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/php.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/react.png",
+  "https://prashanthspatil.github.io/profile/images/fakeprofile/swift.png",
 ]
 
 // Respond with cached resources
