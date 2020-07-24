@@ -27,11 +27,11 @@ const showCoffees = () => {
   container.innerHTML = output
 }
 
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", function() {
-    navigator.serviceWorker
-      .register("/profile/sw.js")
-      .then(reg => {
+window.isUpdateAvailable = new Promise(function(resolve, reject) {
+	if ('serviceWorker' in navigator) {
+		// register service worker file
+		navigator.serviceWorker.register('service-worker.js')
+			.then(reg => {
 				reg.onupdatefound = () => {
 					const installingWorker = reg.installing;
 					installingWorker.onstatechange = () => {
@@ -39,11 +39,9 @@ if ("serviceWorker" in navigator) {
 							case 'installed':
 								if (navigator.serviceWorker.controller) {
 									// new update available
-									console.log('Update available!');
 									resolve(true);
 								} else {
 									// no update available
-									console.log('No update!');
 									resolve(false);
 								}
 								break;
@@ -51,8 +49,17 @@ if ("serviceWorker" in navigator) {
 					};
 				};
 			})
-      .catch(err => console.log("service worker not registered", err))
-  })
-}
+			.catch(err => console.error('[SW ERROR]', err));
+	}
+});
+
+window['isUpdateAvailable']
+	.then(isAvailable => {
+		if (isAvailable) {
+			console.log('New Update available!');
+		} else {
+			console.log('No Update available!');
+		}
+	});
 
 document.addEventListener("DOMContentLoaded", showCoffees)
