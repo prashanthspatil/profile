@@ -30,7 +30,7 @@ const showCoffees = () => {
 window.isUpdateAvailable = new Promise(function(resolve, reject) {
 	if ('serviceWorker' in navigator) {
 		// register service worker file
-		navigator.serviceWorker.register('service-worker.js')
+		navigator.serviceWorker.register('sw.js')
 			.then(reg => {
 				reg.onupdatefound = () => {
 					const installingWorker = reg.installing;
