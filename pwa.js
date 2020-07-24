@@ -6,7 +6,7 @@ const technologies = [
   { name: "Rchitecto", image: "images/fakeprofile/php.png" },
   { name: " Beatae", image: "images/fakeprofile/github.png" },
   { name: " Vitae", image: "images/fakeprofile/laravel.png" },
-  { name: "Inventore", image: "images/fakeprofile/php.png" },
+  { name: "Inventore", image: "images/fakeprofile/swift.png" },
   { name: "Veritatis", image: "images/fakeprofile/react.png" },
   { name: "Accusantium", image: "images/fakeprofile/bootstrap.png" },
 ]

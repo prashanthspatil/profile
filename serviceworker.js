@@ -14,6 +14,7 @@ const assets = [
   "/images/fakeprofile/laravel.png",
   "/images/fakeprofile/php.png",
   "/images/fakeprofile/react.png"
+  "/images/fakeprofile/swift.png"
 ]
 
 self.addEventListener("install", installEvent => {
