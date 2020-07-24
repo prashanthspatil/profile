@@ -30,7 +30,25 @@ if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
     navigator.serviceWorker
       .register("/profile/sw.js")
-      .then(res => console.log("service worker registered"))
+      .then(reg => {
+				reg.onupdatefound = () => {
+					const installingWorker = reg.installing;
+					installingWorker.onstatechange = () => {
+						switch (installingWorker.state) {
+							case 'installed':
+								if (navigator.serviceWorker.controller) {
+									// new update available
+									console.log('New update available!');
+									resolve(true);
+								} else {
+									// no update available
+									resolve(false);
+								}
+								break;
+						}
+					};
+				};
+			})
       .catch(err => console.log("service worker not registered", err))
   })
 }
