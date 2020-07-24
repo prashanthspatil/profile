@@ -7,6 +7,9 @@ body {
   background: #fdfdfd;
   font-family: "Nunito", sans-serif;
   font-size: 1rem;
+  -webkit-user-select: none; /* Disable text selection */
+  -webkit-tap-highlight-color: transparent; /* Disable highlighting */
+  -webkit-touch-callout: none; /* Disable callouts */
 }
 main {
   max-width: 900px;
