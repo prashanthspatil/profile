@@ -26,10 +26,10 @@ const showCoffees = () => {
   container.innerHTML = output
 }
 
-if ("serviceworker" in navigator) {
+if ("serviceWorker" in navigator) {
   window.addEventListener("load", function() {
-    navigator.serviceworker
-      .register("/serviceworker.js")
+    navigator.serviceWorker
+      .register("/serviceWorker.js")
       .then(res => console.log("service worker registered"))
       .catch(err => console.log("service worker not registered", err))
   })
