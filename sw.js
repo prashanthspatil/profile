@@ -19,6 +19,7 @@ var URLS = [                            // Add URL you want to cache in this lis
   "https://prashanthspatil.github.io/profile/images/fakeprofile/swift.jpg",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/vue.png",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/node.png",
+  "https://prashanthspatil.github.io/profile/manifest.json",
 ]
 
 // Respond with cached resources
