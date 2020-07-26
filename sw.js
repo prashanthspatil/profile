@@ -5,7 +5,7 @@ var URLS = [                            // Add URL you want to cache in this lis
   "https://prashanthspatil.github.io/profile/",
   "https://prashanthspatil.github.io/profile/pwa.html",
   "https://prashanthspatil.github.io/profile/css/pwa/style.css",
-  "https://prashanthspatil.github.io/profile/css/toast.js",
+  "https://prashanthspatil.github.io/profile/css/toast.css",
   "https://prashanthspatil.github.io/profile/pwa.js",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/bitbucket.png",
   "https://prashanthspatil.github.io/profile/images/fakeprofile/bootstrap.png",
