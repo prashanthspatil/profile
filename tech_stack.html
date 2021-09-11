@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prashanth S Patil 🇮🇳</title>
+  <meta charset="utf-8">
+  <link rel="shortcut icon" type="image/jpg" href="images/PSP.ico"/>
+</head>
+<body>
+    <div class="hero">
+        <h1>Testimonials</h1>
+        <div class="container">
+            <div class="indicator">
+                <span class="active btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+                <span class="btn"></span>
+            </div>
+            <div class="testimonial">
+                <div class="slide-row" id="slide">
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                        <h3>Prashanth</h3>
+                        <p>Prashhanth LLC Ltd</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/github.svg">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                        <h3>linkedin</h3>
+                        <p>Prashhanth LLC Ltd</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/linkedin.svg">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                        <h3>twitter</h3>
+                        <p>Prashhanth LLC Ltd</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/twitter.svg">
+                    </div>
+                </div>
+                <div class="slide-col">
+                    <div class="user-text">
+                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                        <h3>wordpress</h3>
+                        <p>Prashhanth LLC Ltd</p>
+                    </div>
+                    <div class="user-img">
+                        <img src="images/stack_overflow.svg">
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementsByClassName("btn");
+        var slide = document.getElementById("slide");
+        
+        btn[0].onclick = function() {
+            slide.style.transform = "translateX(0px)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+
+        btn[1].onclick = function() {
+            slide.style.transform = "translateX(-800px)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+
+        btn[2].onclick = function() {
+            slide.style.transform = "translateX(-1600px)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+
+        btn[3].onclick = function() {
+            slide.style.transform = "translateX(-2400px)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            this.classList.add("active");
+        }
+
+        function updateScrollIndicator(value, index, array) {
+            array[index].classList.add("active");
+        }
+    </script>
+</body>
+</html>
+<style>
+    .hero {
+        background: #EC712E;
+        height: 100vh;
+        width: 100%;
+        position: relative;
+    }
+    .hero h1 {
+        text-align: center;
+        padding-top: 80px;
+        font-size: 40px;
+        color: #fff;
+    }
+
+    .slide-row {
+        display: flex;
+        width: 3200px;
+        transition: 1s;
+    }
+
+    .slide-col {
+        width: 800px;
+        height: 400px;
+        position: relative;
+    }
+
+    .user-img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+    }
+
+    .user-img img {
+        height: 50%;
+        margin: -300px;
+        border-radius: 10px;
+    }
+
+    .user-text {
+        background: #2d2d2d;
+        width: 520px;
+        height: 270px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 10px;
+        color: #d3d4d3;
+        padding: 45px;
+        box-sizing: border-box;
+        z-index: 2;
+    }
+
+    .user-text p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .user-text h3 {
+        margin: 35px 0 5px;
+        color: #fff;
+    }
+    .container {
+        width: 800px;
+        height: 400px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .indicator {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -50px;
+    }
+    .btn {
+        display: inline-block;
+        height: 15px;
+        width: 15px;
+        margin: 4px;
+        border-radius: 15px;
+        background: #fff;
+        cursor: pointer;
+        transition: 1s;
+    }
+    .active {
+        width: 45px;
+    }
+    .testimonial {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+    ::selection{
+        color: #d3d4d3;
+        background-color: none;
+    }
+</style>
