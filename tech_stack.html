@@ -17,60 +17,75 @@
             </div>
             <div class="testimonial">
                 <div class="slide-row" id="slide">
-                <div class="slide-col">
-                    <div class="user-text">
-                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
-                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
-                        <h3>Prashanth</h3>
-                        <p>Prashhanth LLC Ltd</p>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                                gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                            <h3>Prashanth</h3>
+                            <p>Prashhanth LLC Ltd</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="images/github.svg">
+                        </div>
                     </div>
-                    <div class="user-img">
-                        <img src="images/github.svg">
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                                gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                            <h3>linkedin</h3>
+                            <p>Prashhanth LLC Ltd</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="images/linkedin.svg">
+                        </div>
                     </div>
-                </div>
-                <div class="slide-col">
-                    <div class="user-text">
-                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
-                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
-                        <h3>linkedin</h3>
-                        <p>Prashhanth LLC Ltd</p>
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                                gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                            <h3>twitter</h3>
+                            <p>Prashhanth LLC Ltd</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="images/twitter.svg">
+                        </div>
                     </div>
-                    <div class="user-img">
-                        <img src="images/linkedin.svg">
+                    <div class="slide-col">
+                        <div class="user-text">
+                            <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
+                                gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
+                            <h3>wordpress</h3>
+                            <p>Prashhanth LLC Ltd</p>
+                        </div>
+                        <div class="user-img">
+                            <img src="images/stack_overflow.svg">
+                        </div>
                     </div>
-                </div>
-                <div class="slide-col">
-                    <div class="user-text">
-                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
-                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
-                        <h3>twitter</h3>
-                        <p>Prashhanth LLC Ltd</p>
-                    </div>
-                    <div class="user-img">
-                        <img src="images/twitter.svg">
-                    </div>
-                </div>
-                <div class="slide-col">
-                    <div class="user-text">
-                        <p>Hi this is prashanth im an in bangalore in karnataka in india gane 
-                            gone are the days whe we nevere infered to do these thing rather either chair sofa couch</p>
-                        <h3>wordpress</h3>
-                        <p>Prashhanth LLC Ltd</p>
-                    </div>
-                    <div class="user-img">
-                        <img src="images/stack_overflow.svg">
-                    </div>
-                </div>
                 </div>
             </div>
+        </div>
+        <div class="controller">
+            <div id="line1"></div>
+            <div id="line2"></div>
+            <div id="line3"></div>
+            <div id="line4"></div>
+            <div id="active"></div>
+            
         </div>
     </div>
     <script>
         var btn = document.getElementsByClassName("btn");
         var slide = document.getElementById("slide");
         
+        var line1 = document.getElementById("line1");
+        var line2 = document.getElementById("line2");
+        var line3 = document.getElementById("line3");
+        var line4 = document.getElementById("line4");
+
+        var active = document.getElementById("active");
+        
         btn[0].onclick = function() {
-            slide.style.transform = "translateX(0px)";
+            slide.style.transform = "translateX(0%)";
             for (item of btn) {
                 item.classList.remove("active");
             }
@@ -78,7 +93,7 @@
         }
 
         btn[1].onclick = function() {
-            slide.style.transform = "translateX(-800px)";
+            slide.style.transform = "translateX(-25%)";
             for (item of btn) {
                 item.classList.remove("active");
             }
@@ -86,7 +101,7 @@
         }
 
         btn[2].onclick = function() {
-            slide.style.transform = "translateX(-1600px)";
+            slide.style.transform = "translateX(-50%)";
             for (item of btn) {
                 item.classList.remove("active");
             }
@@ -94,15 +109,47 @@
         }
 
         btn[3].onclick = function() {
-            slide.style.transform = "translateX(-2400px)";
+            slide.style.transform = "translateX(-75%)";
             for (item of btn) {
                 item.classList.remove("active");
             }
             this.classList.add("active");
         }
 
-        function updateScrollIndicator(value, index, array) {
-            array[index].classList.add("active");
+        line1.onclick = function() {
+            slide.style.transform = "translateX(0%)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            btn[0].classList.add("active");
+            active.style.top = "0%";
+        }
+
+        line2.onclick = function() {
+            slide.style.transform = "translateX(-25%)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            btn[1].classList.add("active");
+            active.style.top = "25%";
+        }
+
+        line3.onclick = function() {
+            slide.style.transform = "translateX(-50%)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            btn[2].classList.add("active");
+            active.style.top = "50%";
+        }
+
+        line4.onclick = function() {
+            slide.style.transform = "translateX(-75%)";
+            for (item of btn) {
+                item.classList.remove("active");
+            }
+            btn[3].classList.add("active");
+            active.style.top = "75%";
         }
     </script>
 </body>
@@ -205,5 +252,32 @@
     ::selection{
         color: #d3d4d3;
         background-color: none;
+    }
+    .controller{
+        width: 1px;
+        height: 320px;
+        display: block;
+        background: #c0c0c0;
+        position: absolute;
+        top: 25%;
+        right: 50px;
+        transform: translateX(-50%);
+        transition: 1s;
+    }
+    #line1,#line2,#line3,#line4{
+        height: 80px;
+        width: 10px;
+        cursor: pointer;
+        transform: translateX(-50%);
+    }
+    #active{
+        width: 4px;
+        height: 80px;
+        border-radius: 10px;
+        background: #fff;
+        position: absolute;
+        top: 0;
+        transform: translateX(-50%);
+        transition: 1s;
     }
 </style>
