@@ -1,0 +1,133 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Menu Design</title>
+</head>
+<body>
+    <div class="menubar">
+        <ul>
+            <li class="active"><a href="">Home</a></li>
+            <li>
+                <a href="">Services</a>
+                <div class="menu-level1">
+                    <ul>
+                        <li><a href="">Development</a></li>
+                        <li><a href="">Testing</a></li>
+                        <li><a href="">Deployment</a></li>
+                        <li class="troubleshoot"><a href="">Troubleshooting</a>
+                            <div class="menu-level2">
+                                <ul>
+                                    <li><a href="">RCA</a></li>
+                                    <li><a href="">Data validation</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="">Technologies</a>
+                <div class="menu-level1">
+                    <ul>
+                        <li><a href="">Android</a></li>
+                        <li><a href="">iOS</a></li>
+                        <li><a href="">React Native</a></li>
+                        <li><a href="">Flutter</a></li>
+                        <li><a href="">Web</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li><a href="">Clients</a></li>
+            <li><a href="">Pricing</a></li>
+            <li><a href="">Training</a></li>
+            <li><a href="">Contact us</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </div>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+    body{
+        background-image:url("images/LightStreamBlue.jpg") ;
+        background-size: cover;
+        background-position: center;
+        box-sizing: border-box;
+    }
+    .menubar{
+        background: #275D16;
+        text-align: center;
+    }
+    .menubar ul{
+        display: flex;
+        list-style: none;
+    }
+    .menubar ul li{
+        width: 10%;
+        margin: 10px 10px;
+        padding: 20px 20px;
+        color: white;
+    }
+    .menubar ul li a{
+        color: white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .menubar ul li:hover{
+        background:#275D16;
+        border-radius: 10px;
+    }
+    .menubar ul li a:hover{
+        color: wheat;
+    }
+    .menu-level1{
+        display: none;
+    }
+    .menu-level2{
+        display: none;
+    }
+    .menubar ul li:hover .menu-level1{
+        display: block;
+        position: absolute;
+        background:#275D16;
+        margin-top: 15px;
+        margin-left:10px;
+        border-radius: 10px;
+    }
+    .menubar ul li:hover .menu-level1 ul{
+        display: block;
+        margin: 10px;
+    }
+    .troubleshoot::after {
+        margin-left: 5px;
+        content: '\27a4';
+    }
+    .menubar ul li:hover .menu-level1 ul li{
+        width: 140px;
+        padding: 10px;
+        border-bottom: 1px dotted white;
+        background: transparent;
+        border-radius: 5px;
+        text-align: left;
+    }
+
+    .menubar ul li:hover .menu-level1 ul li:last-child{
+        border-bottom: none;
+    }
+    .menubar ul li:hover .menu-level1 ul li a:hover{
+        color: wheat;
+    }
+    .troubleshoot:hover .menu-level2{
+        position: absolute;
+        display: block;
+        margin-top: -40px;
+        margin-left: 140px;
+        background:#275D16;
+        border-radius: 5px;
+    }
+</style>
