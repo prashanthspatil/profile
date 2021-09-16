@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div id="menu-btn" class="menu-icon"></div>
+        <nav class="navbar">
+            <a href="#" data-text="home">Home</a>
+            <a href="#" data-text="about">About</a>
+            <a href="#" data-text="gallery">Gallery</a>
+            <a href="#" data-text="pics">Pics</a>
+            <a href="#" data-text="contact">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        document.querySelector('#menu-btn').onclick = () => {
+            document.querySelector('#menu-btn').classList.toggle('menu-btn-alt');
+            document.querySelector('.navbar').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0; 
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+        border: none;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-family: sans-serif;
+        transition: all 0.3s ease-out;
+    }
+    body{
+        min-height: 100vh;
+        background-color: black;
+    }
+    #menu-btn{
+        position: fixed;
+        top: 20px;
+        right: 30px;
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+        border-radius: 50%;
+        font-size: 30px;
+        cursor: pointer;
+        background-color: blanchedalmond;
+        color: black;
+        text-align: center;
+        z-index: 10;
+    }
+    .menu-icon{
+        background-image: url('images/location.png');
+        background-size: cover;
+    }
+    .navbar{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 9;
+        height: 100%;
+        width: 100%;
+        background: yellow;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-flow: column;
+        padding-bottom: 50px;
+        clip-path: circle(0% at 95.3% 8.5%);
+    }
+    .navbar.active{
+        clip-path: circle(140% at 95.3% 8.5%);
+    }
+    .navbar a{
+        font-size: 30px;
+        padding-bottom: 30px;
+        color: black;
+    }
+
+    .navbar a::before{
+        content: attr(data-text);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 5em;
+        color: black;
+        pointer-events: none;
+        font-weight: bolder;
+        letter-spacing: .4em;
+        opacity: 0;
+        z-index: -1;
+    }
+    .navbar a:hover::before{
+        letter-spacing: 0em;
+        opacity: 0.1;
+        transition: 0.3s ease-out;
+    }
+    #menu-btn.menu-btn-alt{
+        background-image: url('images/wordpress.png');
+        /* width: 10%; */
+        /* height: 10%; */
+        /* background-size: cover; */
+    }
+</style>
