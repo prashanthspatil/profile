@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prashanth S Patil 🇮🇳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/jpg" href="images/PSP.ico"/>
+</head>
+<body>
+  <div class="container">
+    <div class="navbar">
+      <img src="/images/icons/icon-144x144.png" class="logo">
+      <nav>
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Products</a></li>
+          <li><a href="">Services</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-textbox">
+        <h1>Sidebar Rotated Text</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="text-box">
+          <h5>Products</h5>
+          <h1>Simply good products for everyday use</h1>
+        </div>
+      </div>
+      <div class="col">
+        <div class="gallery-box">
+          <img src="images/github.svg" id="gallery">
+          <ul>
+            <li class="btn">01</li>
+            <li class="active btn">02</li>
+            <li class="btn">03</li>
+            <li class="btn">04</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    var btn = document.getElementsByClassName("btn");
+    var gallery = document.getElementById("gallery");
+
+    var images = new Array(
+      "images/github.svg",
+      "images/loc_pin.svg",
+      "images/wordpress.svg",
+      "images/mail.svg"
+    );
+    for(let i=0; i<btn.length; i++)
+    {
+      btn[i].onclick = function() {
+        gallery.src = images[i];
+        let current = document.getElementsByClassName("active");
+        current[0].className = current[0].className.replace("active", "");
+        this.className += " active";
+      };
+    }
+  </script>
+</body>
+</html>
+<style>
+  *{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background: linear-gradient(45deg, #21046b, #e14f42);
+  }
+  .logo{
+    width: 40px;
+    cursor: pointer;
+    margin: 10px 10px;
+    border-radius: 40px;
+  }
+  .navbar{
+    width: 90%;
+    height: 15vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+  }
+   nav{
+    flex: 1;
+    text-align: right;
+  }
+  nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 10px;
+  }
+  nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding-right: 10px;
+  } 
+  nav ul li a:hover{
+    color: rgb(150, 74, 74);
+  } 
+  .row{
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    /* min-height: 85vh; */
+  }
+  .col{
+    margin: 20px 50px;
+    flex-basis: 40%;
+    min-width: 300px;
+    position: relative;
+  }
+  .text-box{
+    max-width: 400px;
+    margin-top: 100px;
+  }
+  .text-box h5{
+    color: rgba(216, 208, 208, 0.849);
+  }
+  .text-box h1{
+    color: rgb(228, 220, 220);
+    letter-spacing: 3px;
+    line-height: 65px;
+  }
+  .gallery-box{
+    max-width: 400px;
+    position: relative;
+    margin: auto;
+  }
+  .gallery-box img{
+    width: 100%;
+    height: 50vh;
+    border: 5px solid #ceaeae;
+    box-sizing: border-box;
+  }
+  .gallery-box ul{
+    position: absolute;
+    right: -100px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .gallery-box ul li{
+    list-style: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 0 30px;
+    margin-bottom: 30px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+  }
+  .gallery-box .active{
+    color: rgb(255, 253, 107);
+  }
+  .gallery-box ul li::after{
+    content: '';
+    width: 30px;
+    height: 3px;
+    background: transparent;
+    position: absolute;
+    top: 8px;
+    left: -5px;
+  }
+  .gallery-box .active::after{
+    background: rgb(255, 253, 107);
+  }
+  .sidebar{
+    width: 250px;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgb(255, 255, 255, 0.5);
+    position: absolute;
+  }
+  .sidebar-textbox{
+    transform: rotate(-90deg);
+    position: absolute;
+    top: 45%;
+    text-align: center;
+  }
+</style>

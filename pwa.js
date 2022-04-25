@@ -41,7 +41,7 @@ window.isUpdateAvailable = new Promise(function(resolve, reject) {
 		// register service worker file
 		navigator.serviceWorker.register('sw.js')
 			.then(reg => {
-				showToast('Service worker registered', reg.scope);
+				showToast('Service worker registered '+ reg.scope);
 				reg.onupdatefound = () => {
 					const installingWorker = reg.installing;
 					installingWorker.onstatechange = () => {
@@ -60,7 +60,7 @@ window.isUpdateAvailable = new Promise(function(resolve, reject) {
 				};
 			})
 			.catch(err => {
-				showToast('[SW ERROR]', err);
+				showToast('[SW ERROR] ' + err);
 				console.error('[SW ERROR]', err)});
 	}
 });

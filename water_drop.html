@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Water Drop Effect</title>
+</head>
+<body>
+    <div class="drop">
+        <img src="/images/PSP_600x600.jpg" alt="Prashanth S Patil" style="border-radius: 50%; width: 50px; height: 50px">
+    </div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+    <div class="drop"></div>
+</body>
+</html>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #eee;
+}
+.drop {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    box-shadow: inset 10px 10px 10px rgba(0,0,0, 0.05),
+    15px 25px 10px rgba(0,0,0, 0.05),
+    15px 20px 20px rgba(0,0,0, 0.05),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+}
+.drop::before {
+    content: '';
+    position: absolute;
+    top: 35px;
+    left: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: white;
+}
+.drop::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    left: 50px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+}
+</style>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Prashanth S Patil 🇮🇳</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="css/registerLogin/style.css" rel="stylesheet">
+  <link rel="shortcut icon" type="image/jpg" href="images/PSP.ico"/>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="inner-box" id="innerBox">
+                <div class="card-login">
+                    <h2>Login</h2>
+                    <form>
+                        <input type="email" class="input-box" placeholder="Enter Email ID" required>
+                        <input type="password" class="input-box" placeholder="password" required>
+                        <button type="submit" class="login-submit">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openregister()">New user</button>
+                    <a href="register_login_2.html" target="_blank">Forgot Password</a>
+                </div>
+                <div class="card-register">
+                    <h2>Register</h2>
+                    <form>
+                        <input type="text" class="input-box" placeholder="Name" required>
+                        <input type="email" class="input-box" placeholder="Email" required>
+                        <input type="password" class="input-box" placeholder="password" required>
+                        <button type="submit" class="register-submit">Submit</button>
+                        <input type="checkbox"><span>Remember Me</span>
+                    </form>
+                    <button type="button" class="btn" onclick="openlogin()">I have account</button>
+                    <a href="">Forgot Password</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        var innerbox = document.getElementById("innerBox");
+        function openlogin() {
+            innerbox.style.transform = "rotateY(0deg)";
+        }
+        function openregister() {
+            innerbox.style.transform = "rotateY(-180deg)";
+        }
+    </script>
+</body>
+</html>

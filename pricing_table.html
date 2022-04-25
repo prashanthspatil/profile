@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <nav id="navbar">
+            <div class="logo">
+                <img src="images/PSP.jpg">
+                <span>PSP<div class="underline"><span></span></div></span>
+            </div>
+            <ul id="menu">
+                <li><a href="">Home</a></li>
+                <li><a href="">Features</a></li>
+                <li><a href="">Projects</a></li>
+                <li><a href="">Accomplishment</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="content">
+            <h1 class="slide-left">The<br>Future</h1>
+            <p class="slide-left">Career Responsive Subtle</p>
+            <div class="links slide-left">
+                <a href="#">Learn More</a>
+            </div>
+        </div>
+        <h2>Select Plan</h2>
+        <div class="price-row">
+            <div class="price-col">
+                <p>Starter</p>
+                <h3>$10 <span>/ month</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button>Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Starter</p>
+                <h3>$10 <span>/ month</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button>Add To Cart</button>
+            </div>
+            <div class="price-col">
+                <p>Starter</p>
+                <h3>$10 <span>/ month</span></h3>
+                <ul>
+                    <li>1 Website</li>
+                    <li>10GB Disk Space</li>
+                    <li>Free Email Address</li>
+                    <li>Basic Web Builder</li>
+                    <li>No SSL Certificate</li>
+                    <li>Limited Support</li>
+                </ul>
+                <button>Add To Cart</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var navbar = document.getElementById("navbar")
+        var menu = document.getElementById("menu")
+        window.onscroll = function() {
+            if(window.pageYOffset >= menu.offsetTop) {
+                navbar.classList.add("sticky");
+            }
+            else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .container{
+        width: 100%;
+        min-height: 100vh;
+        background: rgb(243, 229, 229);
+        background-image: linear-gradient(rgba(5, 0, 136, 0.5), rgba(5, 0, 136, 0.5)), url(/images/LightStreamBlue.jpg);
+        background-position: center;
+        background-size: cover;
+        overflow-x: hidden;
+    }
+    .container h2{
+        padding: 20px;
+        color: rgb(250, 250, 250);
+        text-align: center;
+        align-items: center;
+    }
+    nav{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 8%;
+        transition: background 1s;
+    }
+    nav .logo{
+        display: flex;
+        align-items: center;
+        font-size: 26px;
+        font-weight: 600;
+        color: white;
+    }
+    nav .logo img{
+        width: 60px;
+        margin-right: 10px;
+    }
+    nav ul li{
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+        font-weight: 500;
+    }
+    nav:hover{
+        background: rgb(231, 231, 231);
+    }
+    nav:hover .logo{
+        color: #333;
+
+    }
+    nav:hover ul li a{
+        color: #333;
+    }
+    .content{
+        margin-top: 9%;
+        margin-left: 10%;
+        color: white;
+    }
+    .content h1{
+        font-size: 120px;
+        line-height: 140px;
+        font-weight: 600;
+    }
+    .content p{
+        max-width: 500px;
+        line-height: 28px;
+        opacity: 0;
+    }
+    .content .links{
+        margin-top: 30px;
+        opacity: 0;
+    }
+    .content .links a{
+        color: white;
+        text-decoration: none;
+        display: inline-block;
+    }
+    .content .slide-left{
+        animation: slideleft 1s linear forwards;
+    }
+    @keyframes slideleft {
+        0%{
+            transform: translate(100px);
+            opacity: 0;
+        }
+        100%{
+            transform: translate(0px);
+            opacity: 1;
+        }
+    }
+    .content p.slide-left{
+        animation-delay: 1s;
+    }
+    .links.slide-left{
+        animation-delay: 2s;
+    }
+    button{
+        width: 100%;
+        padding: 14px 0;
+        background: transparent;
+        color: white;
+        font-size: 15px;
+        border: 1px solid #c9274a;
+        border-radius: 6px;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: background 0.5s;
+    }
+    button:hover{ 
+        background: #c9274a;
+        color: #fff;
+    }
+    .price-row{
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: 25px;
+    }
+    .price-col{
+        background: #1f283b;
+        padding: 10% 15%;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+    }
+    .price-col p {
+        font-size: 22px;
+    }
+    .price-col h3{
+        font-size: 44px;
+        margin: 20px 0 40px;
+        font-weight: 500;
+    }
+    .price-col h3 span{
+        font-size: 16px;
+    }
+    .price-col ul{
+        text-align: left;
+        margin: 20px 0;
+        color: #ddd;
+        list-style: none;
+    }
+    .price-col ul li {
+        margin: 15px 0;
+    }
+    .price-col ul li::before{
+        content: '\2022';
+        color: #c9274a;
+        font-weight: bold;
+        margin-right: 8px;
+    }
+    div .underline{
+        width: 100%;
+        height: 1px;
+        background: #767676;
+        border-radius: 1px;
+        position: relative;
+        overflow: hidden;
+    }
+    div .underline span{
+        width: 15px;
+        height: 100%;
+        background: #fff;
+        border-radius: 3px;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        animation: moving 4s linear infinite;
+    }
+    @keyframes moving {
+        0%{
+            left: -20px;
+        }
+        100%{
+            left: 100%;
+        }
+    }
+    nav.sticky {
+        position: fixed;
+        /* top: 0; */
+        /* left: 0; */
+        /* padding: 10px 8%; */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: padding 1s;
+    }
+
+    nav.sticky ul { 
+        width: auto;
+    }
+</style>

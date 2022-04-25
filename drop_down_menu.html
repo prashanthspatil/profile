@@ -7,6 +7,11 @@
 </head>
 <body>
     <div class="menubar">
+        <div class="menu-icon">
+            <!-- <div class="menu-line"></div> -->
+            <!-- <div class="menu-line"></div> -->
+            <!-- <div class="menu-line"></div> -->
+        </div>
         <ul>
             <li class="active"><a href="">Home</a></li>
             <li>
@@ -45,22 +50,43 @@
             <li><a href="">About</a></li>
         </ul>
     </div>
+    <div class="sidebar">
+        <div class="social-links">
+            <img src="images/github.svg">
+            <img src="images/twitter.svg">
+            <img src="images/blogger.svg">
+        </div>
+    </div>
 </body>
 </html>
 <style>
+    :root {
+        --menu-color: #2f6d1c;
+        --text-hightlight-color: wheat;
+    }
     *{
         margin: 0;
         padding: 0;
         font-family: sans-serif;
     }
     body{
-        background-image:url("images/LightStreamBlue.jpg") ;
+        background-color: rgb(250, 248, 248);
         background-size: cover;
         background-position: center;
         box-sizing: border-box;
     }
+    .menu-line {
+        width: 35px;
+        height: 5px;
+        background-color: white;
+        margin: 3px 0;
+    }
+    .menu-icon{
+        padding-left: 10px;
+        padding-top: 10px;
+    }
     .menubar{
-        background: #275D16;
+        background: var(--menu-color);
         text-align: center;
     }
     .menubar ul{
@@ -79,11 +105,11 @@
         cursor: pointer;
     }
     .menubar ul li:hover{
-        background:#275D16;
+        background:var(--menu-color);
         border-radius: 10px;
     }
     .menubar ul li a:hover{
-        color: wheat;
+        color: var(--text-hightlight-color);
     }
     .menu-level1{
         display: none;
@@ -94,7 +120,7 @@
     .menubar ul li:hover .menu-level1{
         display: block;
         position: absolute;
-        background:#275D16;
+        background:var(--menu-color);
         margin-top: 15px;
         margin-left:10px;
         border-radius: 10px;
@@ -106,6 +132,7 @@
     .troubleshoot::after {
         margin-left: 5px;
         content: '\27a4';
+        color:var(--text-hightlight-color);
     }
     .menubar ul li:hover .menu-level1 ul li{
         width: 140px;
@@ -115,19 +142,36 @@
         border-radius: 5px;
         text-align: left;
     }
-
     .menubar ul li:hover .menu-level1 ul li:last-child{
         border-bottom: none;
     }
     .menubar ul li:hover .menu-level1 ul li a:hover{
-        color: wheat;
+        color: var(--text-hightlight-color);
     }
     .troubleshoot:hover .menu-level2{
         position: absolute;
         display: block;
         margin-top: -40px;
         margin-left: 140px;
-        background:#275D16;
+        background:var(--menu-color);
         border-radius: 5px;
     }
+    .sidebar{
+    width: 5%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: rgba(190, 185, 185, 0.5);
+    position: absolute;
+    z-index: -1;
+  }
+  .social-links{
+    position: absolute;
+    top: 50%;
+    margin: 0 50%;
+  }
+  .social-links img{
+      /* height: 15px; */
+      margin-bottom: 30px;
+  }
 </style>

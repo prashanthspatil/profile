@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){ 
+   $('#child-content').load("render_child.html");
+});
+</script>
+</head>
+<body>
+    <div class="parent-container" id="parent-content">
+        This is parent HTML content.
+    </div>
+    
+    <div class="child-container" id="child-content">
+        
+    </div>
+
+</body>
+</html>
+<style>
+    .parent-container, .child-container{
+        background: #1f283b;
+        padding: 10% 10%;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        color: white;
+        text-align: center;
+    }
+</style>

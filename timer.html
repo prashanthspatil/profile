@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer</title>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="launchtime">
+                <div>
+                    <p id="days">000</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var countDownDate = new Date("Jan 01, 2022 00:00:00").getTime();
+        var timer = setInterval(function(){
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var sec = 60;
+            var min = 60;
+            var hr = 24;
+
+            var days = Math.floor(distance / (1000 * hr * min * sec));
+            var hours = Math.floor((distance % (1000 * hr * min * sec)) / (1000 * min * sec));
+            var minutes = Math.floor((distance % (1000 * min * sec)) / (1000 * sec));
+            var seconds = Math.floor((distance % (1000 * sec)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(3, 0);
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, 0);
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, 0);
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, 0);
+
+        }, 1000);
+    </script>
+</body>
+</html>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(25, 59, 161);
+    background-position: center;
+    background-size: cover;
+    padding: 0% 0%;
+    position: relative;
+}
+.content{
+    top: 10%;
+    position: absolute;
+    transform: translateY(50%);
+    color: white;
+}
+.launchtime{
+    display: flex;
+}
+.launchtime div{
+    margin-right: 20px;
+    margin-bottom: 40px;
+}
+.launchtime div p{
+    font-size: 60px;
+    margin-bottom: 5px;
+}
+
+.launchtime div p:last-child{
+    color: red;
+}
+</style>

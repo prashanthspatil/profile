@@ -6,7 +6,9 @@ html {
 
 body {
   margin: 0;
-  font-size: 1rem; }
+  font-size: 1rem; 
+  background: radial-gradient(#fff, #ffd6d6);
+}
 
 img {
   height: auto;
@@ -450,3 +452,14 @@ label {
 .portfolio .card {
   overflow: hidden;
   padding: 0 0 2rem 0; }
+
+.form-container {
+  background: #fff;
+  width: 300px;
+  height: 300px;
+  position: relative;
+  text-align: center;
+  padding: 20px 0;
+  margin: auto;
+  box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+}

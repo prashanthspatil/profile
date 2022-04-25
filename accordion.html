@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion</title>
+</head>
+<body>
+    <ul id="accordion">
+        <li>
+            <label for="first">What is accordion?<span>&#x203A;</span></label>
+            <input type="radio" name="accordion" id="first" checked>
+            <div class="content">
+                <p>
+                    Lorem Picsum provides random or specific uploaded images 
+                    as placeholders. Developers need to specify a desired image 
+                    size (width & height) at the end of the request URL.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="second">How to create accordion?<span>&#x203A;</span></label>
+            <input type="radio" name="accordion" id="second">
+            <div class="content">
+                <p>
+                    Lorem Picsum provides random or specific uploaded images 
+                    as placeholders. Developers need to specify a desired image 
+                    size (width & height) at the end of the request URL.
+                </p>
+            </div>
+        </li>
+        <li>
+            <label for="third">Where to use accordion?<span>&#x203A;</span></label>
+            <input type="radio" name="accordion" id="third">
+            <div class="content">
+                <p>
+                    Lorem Picsum provides random or specific uploaded images 
+                    as placeholders. Developers need to specify a desired image 
+                    size (width & height) at the end of the request URL.
+                </p>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;   
+}
+body{
+    background: #07101B;
+}
+#accordion{
+    margin: 10px 10px;
+}
+#accordion li{
+    list-style: none;
+    width: 100%;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+}
+#accordion li label{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #c20000;
+}
+#accordion li label span{
+    transform: rotate(0deg);
+    font-size: 24px;
+    color: #333;
+}
+#accordion label + input[type="radio"]{
+    display: none;
+}
+#accordion .content{
+    padding: 0 10px;
+    line-height: 26px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s;
+}
+#accordion label span + input[type="radio"]:checked{
+    transform: rotate(90deg);
+}
+#accordion label + input[type="radio"]:checked + .content{
+    max-height: 400px;
+}
+@media (max-width:700px) {
+        #accordion{
+            width: 90%;
+            margin: 10px auto;
+        }
+    }
+</style>
