@@ -8,6 +8,8 @@
 </head>
 <body>
     <div class="content">
+        <div id="qrcode"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
         <p>Sample implementations<div class="underline"><span></span></div></p>
         <ul>
             <li><a target="_blank" href="./clip_path_toggle.html">Clip Path Toggle</a></li>
@@ -40,6 +42,11 @@
     </div>
 </body>
 </html>
+<script type="text/javascript">
+    const qrcode = document.getElementById("qrcode");
+    const qr = new QRCode(qrcode);
+    qr.makeCode(window.location.href);
+</script>
 <style>
     .content{
         background: #1f283b;
