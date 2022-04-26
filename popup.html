@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <button type="submit" class="btn-popup" onclick="openPopup()">Popup</button>
+        <div class="popup" id="qrcode">
+            <img src="/images/PSP.jpg">
+            <h2>Thank You!</h2>
+            <p>Message</p>
+            <button type="button" onclick="closePopup()">OK</button>
+        </div>
+
+        <!-- <div class="popup" id="qrcode"></div> -->
+        <script src="./js/qrcodegenerator.min.js"></script>
+    </div>
+    <script type="text/javascript">
+        let popup = document.getElementById("qrcode");
+        function openPopup(){
+            // const qrcode = document.getElementById("qrcode");
+            // const qr = new QRCode(qrcode);
+            // qr.makeCode(window.location.href);
+            popup.classList.remove("close-popup");
+            popup.classList.add("open-popup");
+        }
+        function closePopup(){
+            popup.classList.remove("open-popup");
+            popup.classList.add("close-popup");
+        }
+    </script>
+</body>
+</html>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: sans-serif;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background: radial-gradient(#fff, #cc5555);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .btn-popup{
+        padding: 10px 60px;
+        background: #4d0e1c;
+        color: white;
+        font-size: 15px;
+        border: 1px solid #c9274a;
+        border-radius: 6px;
+        margin-top: 30px;
+        cursor: pointer;
+        transition: background 0.5s;
+    }
+    .btn-popup:hover{ 
+        background: #c9274a;
+        color: #fff;
+    }
+    .popup{
+        width: 50%;
+        background: #fff;
+        border-radius: 6px;
+        position: absolute;
+        top:-50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(0.1);
+        text-align: center;
+        padding: 0 30px 30x;
+        color: #333;
+        visibility: hidden;
+        transition: transform 0.4s, top 0.4s;
+    }
+    .open-popup{
+        visibility: visible;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+    .close-popup{
+        visibility: hidden;
+        top: -50%;
+        transform: translate(-50%, -50%) scale(0.1);
+    }
+    .popup img{
+        width: 102px;
+        border-radius: 50%;
+        margin-top: -50px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+    .popup h2{
+        font-size: 38px;
+        font-weight: 500;
+        margin: 30px 0 10px;
+    }
+    .popup button{
+        width: 80%;
+        margin: 30px 30px;
+        padding: 10px;
+        background: red;
+        color: #fff;
+        border: 0;
+        outline: none;
+        font-size: 18px;
+        border-radius: 4px;
+        cursor: pointer;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    }
+</style>
