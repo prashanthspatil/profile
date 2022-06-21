@@ -83,72 +83,23 @@
 
         var active = document.getElementById("active");
         
-        btn[0].onclick = function() {
-            slide.style.transform = "translateX(0%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            this.classList.add("active");
-        }
+        btn[0].onclick = function() {scrollTo(0, 0);}
+        btn[1].onclick = function() {scrollTo(1, 25);}
+        btn[2].onclick = function() {scrollTo(2, 50);}
+        btn[3].onclick = function() {scrollTo(3, 75);}
 
-        btn[1].onclick = function() {
-            slide.style.transform = "translateX(-25%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            this.classList.add("active");
-        }
+        line1.onclick = function() {scrollTo(0, 0);}
+        line2.onclick = function() {scrollTo(1, 25);}
+        line3.onclick = function() {scrollTo(2, 50);}
+        line4.onclick = function() {scrollTo(3, 75);}
 
-        btn[2].onclick = function() {
-            slide.style.transform = "translateX(-50%)";
+        function scrollTo(currentIndex, transformPercent) {
+            slide.style.transform = "translateX("+ -1 * transformPercent +"%)";
             for (item of btn) {
                 item.classList.remove("active");
             }
-            this.classList.add("active");
-        }
-
-        btn[3].onclick = function() {
-            slide.style.transform = "translateX(-75%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            this.classList.add("active");
-        }
-
-        line1.onclick = function() {
-            slide.style.transform = "translateX(0%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            btn[0].classList.add("active");
-            active.style.top = "0%";
-        }
-
-        line2.onclick = function() {
-            slide.style.transform = "translateX(-25%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            btn[1].classList.add("active");
-            active.style.top = "25%";
-        }
-
-        line3.onclick = function() {
-            slide.style.transform = "translateX(-50%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            btn[2].classList.add("active");
-            active.style.top = "50%";
-        }
-
-        line4.onclick = function() {
-            slide.style.transform = "translateX(-75%)";
-            for (item of btn) {
-                item.classList.remove("active");
-            }
-            btn[3].classList.add("active");
-            active.style.top = "75%";
+            btn[currentIndex].classList.add("active");
+            active.style.top = ""+transformPercent+"%";
         }
     </script>
 </body>
