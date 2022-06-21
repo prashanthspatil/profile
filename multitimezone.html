@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MultiTimeZone</title>
+</head>
+<body>
+        <div class="timebox">
+        	<h1>Indian Time</h1>
+            <p id="indian-time">--:--:--</p>
+        </div>
+        <div class="timebox">
+        	<h1>London Time</h1>
+            <p id="london-time">--:--:--</p>
+        </div>
+        <div class="timebox">
+        	<h1>New York Time</h1>
+            <p id="newyork-time">--:--:--</p>
+        </div>
+        <div class="timebox">
+        	<h1>Sydney Time</h1>
+            <p id="sydney-time">--:--:--</p>
+        </div>
+        <div class="timebox">
+        	<h1>Auckland Time</h1>
+            <p id="auckland-time">--:--:--</p>
+        </div>
+    <script>
+        'use strict';
+        /*
+        toLocaleTimeString options
+        timeZone:''
+
+        dataStyle: 'full' | 'long' | 'medium' | 'short'
+
+        timeStyle: 'full' | 'long' | 'medium' | 'short'
+
+        hourCycle: 'h11' | 'h12' | 'h23' | 'h24'
+
+        weekday: 'long' | 'short' | 'narrow'
+        */
+        document.addEventListener("DOMContentLoaded", function(){
+	        setInterval(() => {
+	        	var date = new Date();
+	            document.getElementById("indian-time").textContent = date.toLocaleString("en-IN", {weekday:'long'}) +', '+ date.toLocaleString("en-IN", {timeZone:'Asia/Kolkata', dateStyle:'long',timeStyle:'full', hourCycle: 'h24'}); // Only time
+
+	            document.getElementById("london-time").textContent = date.toLocaleString("en-IN", {weekday:'long'}) +', '+ date.toLocaleString("en-IN", {timeZone:'Europe/London', dateStyle:'long',timeStyle:'full', hourCycle: 'h24'}); // Only time
+	            
+	            document.getElementById("newyork-time").textContent = date.toLocaleString("en-IN", {weekday:'long'}) +', '+ date.toLocaleString("en-IN", {timeZone:'America/New_york', dateStyle:'long',timeStyle:'full', hourCycle: 'h24'}); // Only time
+
+	            document.getElementById("sydney-time").textContent = date.toLocaleString("en-IN", {weekday:'long'}) +', '+ date.toLocaleString("en-IN", {timeZone:'Australia/Sydney', dateStyle:'long',timeStyle:'full', hourCycle: 'h24'}); // Only time
+
+	            document.getElementById("auckland-time").textContent = date.toLocaleString("en-IN", {weekday:'long'}) +', '+ date.toLocaleString("en-IN", {timeZone:'Pacific/Auckland', dateStyle:'long',timeStyle:'full', hourCycle: 'h24'}); // Only time
+	        }, 1000)
+        });
+    </script>
+</body>
+</html>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.timebox {
+    border: 2px solid #f00;
+    border-radius: 5px;
+    height: 120px;
+    width: 350px;
+    display: inline-block;
+}
+.timebox h1, .timebox p {
+	margin-top: 10px;
+	text-align: center;
+}
+</style>

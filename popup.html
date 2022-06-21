@@ -10,7 +10,7 @@
     <div class="container">
         <button type="submit" class="btn-popup" onclick="openPopup()">Popup</button>
         <div class="popup" id="qrcode">
-            <img src="/images/PSP.jpg">
+            <img src="./images/PSP.jpg">
             <h2>Thank You!</h2>
             <p>Message</p>
             <button type="button" onclick="closePopup()">OK</button>
@@ -25,6 +25,7 @@
             // const qrcode = document.getElementById("qrcode");
             // const qr = new QRCode(qrcode);
             // qr.makeCode(window.location.href);
+            
             popup.classList.remove("close-popup");
             popup.classList.add("open-popup");
         }
