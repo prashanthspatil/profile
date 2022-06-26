@@ -8,7 +8,6 @@
 </head>
 <body>
     <div class="container">
-        <img src="images/LightStreamBlue.jpg">
         <h1 id="current-time">12:00:00</h1>
         <div class="quotes">
             <h2>Lost Time is never found again</h2>
@@ -17,7 +16,7 @@
     <script>
         'use strict';
         setInterval(() => {
-            // document.getElementById("current-time").textContent = new Date().toLocaleString().replace(", ", " - ");
+            // document.getElementById("current-time").textContent = new Date().toLocaleString().replace(", ", " - "); // with date
             document.getElementById("current-time").textContent = new Date().toLocaleTimeString().replace(", ", " - "); // Only time
         }, 1000)
     </script>
@@ -33,7 +32,9 @@
 .container {
     width: 100%;
     height: 100vh;
-    background: #ffe3e3;
+    background: linear-gradient(to top, rgba(0,0,0,0.5) 50%, rgba(0,0,0,0.5) 50%), url('images/LightStreamBlue.jpg');
+    background-position: center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
