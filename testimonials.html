@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Testimonials</title>
+</head>
+<body>
+<div class="container">
+	<div class="testimonial">
+		<div class="testimonial-text">
+			<div class="user-testimonial">
+				<h1>&bdquo;</h1>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut 
+				</p>
+				<span>User Name 1, Designation, Workplace</span>
+			</div>
+			<div class="user-testimonial active-testimonial">
+				<h1>&bdquo;</h1>
+				<p>
+					enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+				</p>
+				<span>User Name 2, Designation, Workplace</span>
+			</div>
+			<div class="user-testimonial">
+				<h1>&bdquo;</h1>
+				<p>
+					cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				<span>User Name 3, Designation, Workplace</span>
+			</div>
+		</div>
+		<div class="testimonial-avatars">
+			<img src="images/github.svg" class="user-avatar" onclick="showReview()">
+			<img src="images/linkedin.svg" class="user-avatar active-user" onclick="showReview()">
+			<img src="images/twitter.svg" class="user-avatar" onclick="showReview()">
+		</div>
+	</div>
+</div>
+<script>
+	let userTestimonials = document.getElementsByClassName("user-testimonial");
+	let userAvatars = document.getElementsByClassName("user-avatar");
+
+	function showReview() {
+		for(userAvatar of userAvatars) {
+			userAvatar.classList.remove("active-user");
+		}
+		for(userTestimonial of userTestimonials) {
+			userTestimonial.classList.remove("active-testimonial");
+		}
+
+		let i = Array.from(userAvatars).indexOf(event.target);
+		userAvatars[i].classList.add("active-user");
+		userTestimonials[i].classList.add("active-testimonial");
+	}
+</script>
+</body>
+</html>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;   
+}
+.container{
+	width: 100%;
+	min-height: 100vh;
+	background: #ffe8f0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.testimonial{
+	width: 90%;
+	max-width: 800px;
+	margin: auto;
+}
+.testimonial-text{
+	background: #ff0058;
+	color: #fff;
+	width: 100%;
+	height: 350px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+.user-testimonial{
+	width: 80%;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: none;
+}
+.user-testimonial.active-testimonial{
+	display: block;
+	animation: moveUp 1s linear forwards;
+}
+@keyframes moveUp {
+	0%{
+		margin-top: 25px;
+	}
+	100%{
+		margin-top: 0px;
+	}
+}
+.user-testimonial h1{
+	margin-bottom: 20px;
+}
+.user-avatar{
+	width: 50px;
+	height: 50px;
+}
+.user-testimonial span{
+	display: block;
+	font-size: 13px;
+	margin-top: 70px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+.testimonial-avatars{
+	margin-top: 30px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.user-avatar{
+	width: 65px;
+	padding: 5px;
+	border-radius: 50%;
+	margin: 10px;
+	cursor: pointer;
+}
+.user-avatar.active-user{
+	width: 50px;
+	border: 3px solid #ff0058;
+}
+</style>
