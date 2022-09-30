@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Border Animation</title>
+</head>
+<body>
+<div class="box">
+	<span></span>
+	<h2>1</h2>
+</div>
+</body>
+</html>
+<style>
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: sans-serif;
+	}
+	body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		background: #0c1022;
+	}
+	.box {
+		position: relative;
+		width: 300px;
+		height: 400px;
+		background: rgba(0, 0, 0, 0.75);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		overflow: hidden;
+		border-radius: 20px;
+	}
+	.box::before{
+		content: '';
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		background-image: conic-gradient(transparent, transparent, transparent, #00ccff);
+		animation: borderanimate 4s linear infinite;
+	}
+	.box::after{
+		content: '';
+		position: absolute;
+		width: 500px;
+		height: 500px;
+		background-image: conic-gradient(transparent, transparent, transparent, #d400d4);
+		animation: borderanimate 4s linear infinite;
+		animation-delay: -2s;
+	}
+	@keyframes borderanimate {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+	.box span {
+		position: absolute;
+		inset: 5px;
+		border-radius: 20px;
+		background: #0c1022;
+		z-index: 1;
+	}
+	.box h2{
+		position: relative;
+		z-index: 2;
+		color: white;
+		font-size: 10em;
+	}
+</style>
