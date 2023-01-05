@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Border Gradient</title>
+</head>
+<body>
+	<div class="profile-pic">
+		
+	</div>
+</body>
+</html>
+<style>
+	body{
+		padding: 20px;
+		background: #050505;
+	}
+	.profile-pic{
+		width: 300px;
+		height: 300px;
+		border: 25px solid transparent;
+		background-image: url('images/PSP2.jpg'), 
+		linear-gradient(to bottom right, #00d354, #00dbc9, #006cd8);
+		background-size: cover;
+		background-origin: border-box;
+		background-clip: content-box, border-box;
+	}
+</style>

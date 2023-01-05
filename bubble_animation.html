@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bubble Animation</title>
+</head>
+<body>
+<div class="container">
+	<div id="bubbles">
+	</div>
+</div>
+</body>
+</html>
+<script>
+	var spanTag = "";
+	var num_of_bubbles;
+	for (num_of_bubbles=1; num_of_bubbles<=40; num_of_bubbles++) {
+	  spanTag = spanTag + "<span style=\"--i:"+ randomInteger(1, 30) + ";\">" + "</span>"+"<br>";
+	}
+	element = document.getElementById("bubbles");
+	document.getElementById("bubbles").innerHTML = spanTag;
+	element.classList.remove('bubbles');
+	element.classList.add("bubbles");
+
+	function randomInteger(min, max) {
+  		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+
+</script>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		min-height: 100vh;
+		background: #303841;
+	}
+	.container{
+		position: absolute;
+		width: 100%;
+		height: 100vh;
+		overflow: hidden;
+	}
+	.bubbles{
+		position: relative;
+		display: flex;
+	}
+	.bubbles span{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		background-color: yellowgreen;
+		margin: 0 4px;
+		border-radius: 50%;
+		box-shadow: 0 0 10px darkcyan, 
+					0 0 50px lightcyan,
+					0 0 100px lightcyan;
+		animation: animate 15s linear infinite;
+		animation-duration: calc(120s/var(--i));
+	}
+	.bubbles span:nth-child(even){
+		background-color: darkred;
+		box-shadow: 0 0 10px orangered, 
+					0 0 50px palevioletred,
+					0 0 100px red
+	}
+
+	@keyframes animate{
+		0%{
+			transform: translateY(100vh) scale(0);
+		}
+		100%{
+			transform: translateY(-10vh) scale(1);
+		}
+	}
+</style>

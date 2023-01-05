@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Conditional Display</title>
+</head>
+<body>
+<form>
+	<input type="text" placeholder="Name">
+	<input type="submit" value="Send">
+</form>
+</body>
+</html>
+<style>
+	input[type="submit"] {
+		opacity: 0;
+		transition: 0.3s;
+	}
+	input:not(:placeholder-shown) + input[type="submit"] {
+		opacity: 1;
+	}
+</style>

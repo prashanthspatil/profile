@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Flex Grid</title>
+</head>
+<body>
+<div class="parent">
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+	<div class="child"></div>
+</div>
+</body>
+</html>
+<style>
+	.parent{
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.child{
+		width: calc(33% - 10px);
+		height: 100px;
+		background-color: skyblue;
+		margin-left: 10px;
+		margin-top: 10px;
+	}
+	@media (min-width: 640px) {
+		.child {
+			width: calc(25% - 10px);
+		}
+	}
+	@media (min-width:  940px) {
+		.child{
+			width: calc(20% - 10px);
+		}
+	}
+</style>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Popup</title>
+</head>
+<body>
+
+	<div class="container">
+		
+	</div>
+
+	<div id="modelBox">
+		<img src="images/github.svg">
+		<div class="offer-text">
+			<h2>Get 15% off</h2>
+			<small>on all products</small>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<form>
+				<input type="email" placeholder="Email Address">
+				<button type="submit">Subscribe</button>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		font-family: sans-serif;
+		box-sizing: border-box;
+	}
+	.container{
+		width: 100%;
+		height: 100vh;
+		background-image: linear-gradient(45deg, #4f639b, #fff);
+	}
+	#modalBox{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 80%;
+		max-width: 400px;
+		background: #fff;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	.offer-text{
+		padding: 20px 40px 40px 40px;
+		font-size: 14px;
+		line-height: 22px;
+	}
+	.offer-text h2{
+		font-size: 38px;
+		font-weight: 600;
+		margin-bottom: 10px;
+	}
+	.offer-text small{
+		display: inline-block;
+		color: #ff3b4c;
+		font-weight: 600;
+		margin-bottom: 20px;
+
+	}
+	.offer-text form{
+		margin-top: 30px;
+		display: flex;
+		background: #efefef;
+		border-radius: 4px;
+	}
+	.offer-text form input{
+		flex: 1;
+		border: 0;
+		outline: 0;
+		background: transparent;
+		padding: 12px 10px;
+	}
+	.offer-text form button{
+		border: 0;
+		outline: 0;
+		cursor: pointer;
+		background: #ff2b4e;
+		color: #fff;
+		padding: 0 15px;
+		border-radius: 4px;
+	}
+</style>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Invalid Input</title>
+</head>
+<body>
+	<input type="text" pattern="[a-z]*" name="name" placeholder="Enter Name">
+</body>
+</html>
+<style>
+	input:invalid{
+		animation: shake 0.2s;
+	}
+
+	@keyframes shake{
+		25% {transform: translateX(2px)}
+		50% {transform: translateX(-2px)}
+		75% {transform: translateX(2px)}
+	}
+</style>
